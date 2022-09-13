@@ -8,10 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CardComponent implements OnInit {
 
   @Input()
-  background:string;
+  background?:string;
 
   @Input()
-  color:string;
+  color?:string;
 
   themes:Theme[]=[];
 
@@ -38,7 +38,7 @@ export class CardComponent implements OnInit {
 
 }
 
-export class Theme{
+export interface Theme{
   background:string;
   color:string;
 }

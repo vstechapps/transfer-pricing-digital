@@ -1,11 +1,11 @@
 export type Menu={
   name:string;
-  click:string;
-  route:string;
-  icon:string;
+  click?:string;
+  route?:string;
+  icon?:string;
 }
 
-export class User{
+export interface User{
   id:string;
   name:string;
   email:string;

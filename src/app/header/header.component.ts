@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FirestoreService } from '../services/firestore.service';
 import { Menu, User, Role } from '../models/models';
-import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 
 
@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   title:string="Header Title"
   menus: Menu[] = [];
   firebaseUser: any = undefined;
-  user: User = undefined;
+  user?: User;
 
   constructor(public auth: AngularFireAuth, public firestore: FirestoreService, public router: Router) {
     this.auth.authState.subscribe((res) => {
@@ -38,7 +38,7 @@ export class HeaderComponent implements OnInit {
   }
 
   handleSuccessLogin(res: any) {
-    this.firestore.userRef.doc(res.uid).valueChanges().subscribe((user: User) => {
+    this.firestore.userRef.doc(res.uid).valueChanges().subscribe((user?: User) => {
       console.log("User value Changed ", user)
       if (this.firebaseUser != null) {
         if (user != null) {
@@ -72,7 +72,7 @@ export class HeaderComponent implements OnInit {
   }
 
   handleNotLoggedIn() {
-    this.firestore.user = null;
+    this.firestore.user = undefined;
     this.refresh();
   }
 
