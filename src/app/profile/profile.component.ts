@@ -20,7 +20,7 @@ export class ProfileComponent implements OnInit {
 
   toggleNotifications() {
     var a = this;
-    this.firestore.user.notifications=!this.firestore.user.notifications
+    this.firestore.user.notifications=!this.firestore.user?.notifications
     if (!this.firestore.user.notifications) {
       this.toaster.success("Success", "Notifications Disabled");
     } else {
@@ -33,7 +33,7 @@ export class ProfileComponent implements OnInit {
   }
 
   update() {
-    this.firestore.userRef.doc(this.firestore.user.id).set(this.firestore.user);
+    this.firestore.userRef.doc(this.firestore.user?.id).set(this.firestore.user);
   }
 
 }
