@@ -15,6 +15,8 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 @NgModule({
   declarations: [],
   imports: [
+  ],
+  exports:[
     MatSidenavModule,MatIconModule,MatToolbarModule,MatButtonModule,MatListModule,MatRippleModule,MatExpansionModule,MatFormFieldModule,MatInputModule,MatSlideToggleModule,MatSidenavModule
   ],
   providers: []

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FirestoreService } from '../services/firestore.service';
-import { Role } from '../models/models';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -8,7 +8,7 @@ import { Role } from '../models/models';
   styleUrls: ['./dashboard.component.less']
 })
 export class DashboardComponent implements OnInit {
-  userActivity:any={};
+  
   constructor(public firestore: FirestoreService) {
   }
 

@@ -1,26 +1,18 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
-import { User } from '../models/models';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FirestoreService {
-  user?: User;
-  userRef: AngularFirestoreCollection<User>;
+  
 
   constructor(public firestore: AngularFirestore) {
-    this.userRef = this.firestore.collection<User>('users');
-  }
-
-  setUser(user: User) {
-    this.user = user;  
-    this.updateServiceWorker();
   }
 
 
   updateServiceWorker() {
-    var a = this;
+    var a = {user:{name:"test"}};
     if (Notification.permission == 'granted') {
     var interval = setInterval(function () {
         navigator.serviceWorker.getRegistration().then(function (reg) {

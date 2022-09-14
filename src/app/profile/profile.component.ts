@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FirestoreService } from '../services/firestore.service';
 import { ToastrService } from 'ngx-toastr';
-import { User } from '../models/models';
 
 @Component({
   selector: 'app-profile',
@@ -21,8 +20,6 @@ export class ProfileComponent implements OnInit {
 
 
   update() {
-    let user:any=this.firestore.user;
-    this.firestore.userRef.doc(this.firestore.user?.id).set(user);
   }
 
 }
