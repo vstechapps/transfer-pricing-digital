@@ -9,7 +9,6 @@ import { Role } from '../models/models';
 })
 export class DashboardComponent implements OnInit {
   userActivity:any={};
-  Role:Role;
   constructor(public firestore: FirestoreService) {
   }
 

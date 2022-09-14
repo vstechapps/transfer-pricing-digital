@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
-import { AngularFireAuth } from '@angular/fire/auth';
-import firebase from 'firebase/app';
 
 import { FirestoreService } from '../services/firestore.service';
 
@@ -12,8 +11,8 @@ import { FirestoreService } from '../services/firestore.service';
 })
 export class LoginComponent implements OnInit {
 
-  username:string;
-  password:string;
+  username:string="";
+  password:string="";
   clickCount:number=0;
   isAdmin=false;
 
@@ -30,14 +29,14 @@ export class LoginComponent implements OnInit {
 
   adminLogin(){
     this.auth.signInWithEmailAndPassword(this.username,this.password)
-    .catch(err=>{
+    .catch((err:any)=>{
       console.error(err);
       alert(err.message);
     });
   }
 
   login() {
-    this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+
   }
 
 }
