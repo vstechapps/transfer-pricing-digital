@@ -2792,7 +2792,7 @@ td.mat-footer-cell {
   background-color: rgba(255, 255, 255, 0.12);
 }
 .mat-toolbar {
-  background: #212121;
+  background: teal;
   color: #fff;
 }
 .mat-toolbar.mat-primary {
