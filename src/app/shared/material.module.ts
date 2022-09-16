@@ -7,10 +7,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatRippleModule } from '@angular/material/core';
 import { MatExpansionModule} from '@angular/material/expansion';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule} from '@angular/material/input';
+import { MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MatTabsModule} from '@angular/material/tabs';
 
 
 @NgModule({

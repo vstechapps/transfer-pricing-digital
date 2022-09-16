@@ -2147,11 +2147,11 @@ td.mat-footer-cell {
   color: rgba(255, 255, 255, 0.5);
 }
 .mat-drawer-container {
-  background-color: #303030;
-  color: #fff;
+  background-color: transparent;
+  color: #000
 }
 .mat-drawer {
-  background-color: chocolate;
+  background-color: teal;
   color: #fff;
 }
 .mat-drawer.mat-drawer-push {
