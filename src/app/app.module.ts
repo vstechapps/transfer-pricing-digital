@@ -23,6 +23,7 @@ import { OurServicesComponent } from './our-services/our-services.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FaqComponent } from './faq/faq.component';
 import { WorkflowComponent } from './workflow/workflow.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { WorkflowComponent } from './workflow/workflow.component';
     OurServicesComponent,
     ContactUsComponent,
     FaqComponent,
-    WorkflowComponent
+    WorkflowComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

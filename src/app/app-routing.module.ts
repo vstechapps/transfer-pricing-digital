@@ -8,6 +8,7 @@ import { OurServicesComponent } from './our-services/our-services.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FaqComponent } from './faq/faq.component';
 import { WorkflowComponent } from './workflow/workflow.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   { path:'', pathMatch:"full", redirectTo: "home"},
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'our-services', component: OurServicesComponent},
   { path: 'contact-us', component: ContactUsComponent},
   { path: 'faq', component:FaqComponent},
-  { path: 'workflow',component: WorkflowComponent},
+  { path: 'workflow', component: WorkflowComponent},
+  { path: 'register/:type', component: RegisterComponent},
   { path: 'login', component: LoginComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'dashboard', component: DashboardComponent }

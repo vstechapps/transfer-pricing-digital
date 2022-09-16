@@ -1,17 +1,17 @@
+<mat-toolbar>
+  <div class="d-block d-md-none">
+    <button mat-icon-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
+  </div>
+  <span>{{title}}</span>
+  <span class="example-spacer"></span>
+  <div class="d-none d-md-block">
+  <button mat-button routerLink="/home" routerLinkActive="active-link" aria-label="Home">Home</button>
+  <button mat-button routerLink="/our-services" routerLinkActive="active-link" aria-label="Services">Our Services</button>
+  <button mat-button routerLink="/contact-us" routerLinkActive="active-link" aria-label="Contact">Contact Us</button>
+  <button mat-button routerLink="/faq" routerLinkActive="active-link" aria-label="Faq">FAQ</button>
+  </div>
+</mat-toolbar>
 <mat-drawer-container class="example-container" [hasBackdrop]="true">
-  <mat-toolbar>
-    <div class="d-none d-sm-block">
-      <button mat-icon-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
-    </div>
-    <span>{{title}}</span>
-    <span class="example-spacer"></span>
-    <div class="d-block d-sm-none">
-    <button mat-button routerLink="/home" routerLinkActive="active-link" aria-label="Home">Home</button>
-    <button mat-button routerLink="/our-services" routerLinkActive="active-link" aria-label="Services">Our Services</button>
-    <button mat-button routerLink="/contact-us" routerLinkActive="active-link" aria-label="Contact">Contact Us</button>
-    <button mat-button routerLink="/faq" routerLinkActive="active-link" aria-label="Faq">FAQ</button>
-    </div>
-  </mat-toolbar>
   <mat-drawer #drawer mode="over">
     <div style="margin-left:10px">
     <button mat-button routerLink="/home" routerLinkActive="active-link" aria-label="Home">Home</button> <br/>
@@ -21,5 +21,4 @@
     </div>
   </mat-drawer>
   <router-outlet></router-outlet>
-
 </mat-drawer-container>
