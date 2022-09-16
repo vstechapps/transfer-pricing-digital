@@ -2,16 +2,17 @@
   <mat-toolbar-row>
     <span>{{title}}</span>
     <span class="example-spacer"></span>
-    <button mat-button aria-label="Home">
+
+    <button mat-button routerLink="/home" routerLinkActive="active-link" aria-label="Home">
       Home
     </button>
-    <button mat-button aria-label="Services">
+    <button mat-button routerLink="/our-services" routerLinkActive="active-link" aria-label="Services">
       Our Services
     </button>
-    <button mat-button aria-label="Contact">
+    <button mat-button routerLink="/contact-us" routerLinkActive="active-link" aria-label="Contact">
       Contact Us
     </button>
-    <button mat-button aria-label="Faq">
+    <button mat-button routerLink="/faq" routerLinkActive="active-link" aria-label="Faq">
       FAQ
     </button>
   </mat-toolbar-row>

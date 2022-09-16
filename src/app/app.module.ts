@@ -18,7 +18,11 @@ import { CardComponent } from './card/card.component';
 import { ToastrModule } from 'ngx-toastr';
 import { LoginComponent } from './login/login.component';
 import { AngularFireModule } from '@angular/fire/compat';
-import { MaterialModule } from './material.module';
+import { MaterialModule } from './shared/material.module';
+import { OurServicesComponent } from './our-services/our-services.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FaqComponent } from './faq/faq.component';
+import { WorkflowComponent } from './workflow/workflow.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { MaterialModule } from './material.module';
     ProfileComponent,
     InputComponent,
     CardComponent,
-    LoginComponent
+    LoginComponent,
+    OurServicesComponent,
+    ContactUsComponent,
+    FaqComponent,
+    WorkflowComponent
   ],
   imports: [
     BrowserModule,
