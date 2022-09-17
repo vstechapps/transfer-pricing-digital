@@ -13,30 +13,18 @@ export class LoginComponent implements OnInit {
 
   username:string="";
   password:string="";
-  clickCount:number=0;
-  isAdmin=false;
 
   constructor(public auth: AngularFireAuth, public firestore: FirestoreService) { }
 
   ngOnInit(): void {
   }
 
-  checkIfAdmin(){
-    console.log("Click Event..")
-    this.isAdmin=this.clickCount>=5;
-    this.clickCount++;
-  }
-
-  adminLogin(){
+  login(){
     this.auth.signInWithEmailAndPassword(this.username,this.password)
     .catch((err:any)=>{
       console.error(err);
       alert(err.message);
     });
-  }
-
-  login() {
-
   }
 
 }

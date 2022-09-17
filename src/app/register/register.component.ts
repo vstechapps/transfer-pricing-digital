@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  type:string | null="";
+
+  constructor(private route:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe(map=>{
+      this.type=map.get("type");
+    });
   }
 
 }

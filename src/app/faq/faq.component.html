@@ -1,1 +1,14 @@
-<p>faq works!</p>
+<div class="container mt-1 p-5">
+    <div class="mt-2" *ngFor="let q of questions">
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        {{q.q}}
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <p>{{q.a}}</p>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+</div>
