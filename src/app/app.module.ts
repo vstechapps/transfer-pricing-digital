@@ -24,6 +24,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FaqComponent } from './faq/faq.component';
 import { WorkflowComponent } from './workflow/workflow.component';
 import { RegisterComponent } from './register/register.component';
+import { SectionCardsComponent } from './section-cards/section-cards.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { RegisterComponent } from './register/register.component';
     ContactUsComponent,
     FaqComponent,
     WorkflowComponent,
-    RegisterComponent
+    RegisterComponent,
+    SectionCardsComponent
   ],
   imports: [
     BrowserModule,
