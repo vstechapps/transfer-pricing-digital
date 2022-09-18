@@ -29,6 +29,7 @@
               "src/assets",
               "src/manifest.json",
               "src/404.html",
+              "src/CNAME",
               "src/service-worker.js"
             ],
             "styles": [
