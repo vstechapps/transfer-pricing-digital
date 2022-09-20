@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SectionCardsComponent implements OnInit {
 
-  constructor() { }
+  cards:any[]=[];
+  constructor() {
+    this.cards.push({image:"assets/icons/company.png",head:"Are you company",content:"",action:"Get Started",route:"/register/company"});
+    this.cards.push({image:"assets/icons/consultant.png",head:"Are you consultant",content:"",action:"Get Started",route:"/register/consultant"});
+    this.cards.push({image:"assets/icons/support-img.jpg",head:"Reach Out",content:"",action:"Get Started",route:"/contact-us"});
+   }
 
   ngOnInit(): void {
   }
