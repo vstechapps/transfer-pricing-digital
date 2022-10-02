@@ -25,6 +25,7 @@ import { FaqComponent } from './faq/faq.component';
 import { WorkflowComponent } from './workflow/workflow.component';
 import { RegisterComponent } from './register/register.component';
 import { SectionCardsComponent } from './section-cards/section-cards.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { SectionCardsComponent } from './section-cards/section-cards.component';
     AngularFireModule.initializeApp(environment.firebase),
     BrowserAnimationsModule,
     MaterialModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
