@@ -4,16 +4,23 @@ export interface User{
     role:string;
 }
 
+export interface Consultant extends User{
+    firstName:string;
+    lastName:string;
+    mail:string;
+    contact:string;
+    address:Address;
+}
+
 export interface Company extends User{
-    id:string;
     name:string;
     mail:string;
     contact:string;
     address:Address;
-
 }
 
 export interface Address{
+    address:string;
     city:string;
     state:string;
     country:string;
