@@ -1,62 +1,183 @@
 <div class="container mt-3" *ngIf="type=='company'">
-    <h2>Company Registration</h2>
-    <div class="col-md-6 col-sm-12">
-        <div class="mt-1 px-2">
+    <div class="image-background"></div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <h2>Company Registration </h2>
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <span class="navigation-link" routerLink="/register/consultant">Are you consultant? Register here</span><br/>
+            <span class="navigation-link" routerLink="/login">Already Registered? Login now</span>
+        </div>     
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <label>Company Name<span class="text-danger">*</span></label>
             <input type="text" class="form-control" id="companyname" placeholder="Company Name" name="companyname">
             <span class="error"></span>
         </div>
-        <div class="mt-1 px-2">
-            <input type="email" class="form-control" id="companymail" placeholder="Company Mail" name="companymail">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <label>Industry<span class="text-danger">*</span></label>
+            <select class="form-select" id="industry" name="industry">
+                <option selected disabled>Choose Industry</option>
+            </select>
             <span class="error"></span>
         </div>
-        <div class="mt-1 px-2">
-            <input type="email" class="form-control" id="contact" placeholder="Contact Number" name="contact">
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <label>Company Address<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="address" placeholder="Address" name="address">
             <span class="error"></span>
         </div>
-        <div class="mt-1 px-2">
-            <textarea class="form-control" placeholder="Address"></textarea>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <label>Country<span class="text-danger">*</span></label>
+            <select class="form-select" id="country" name="country" disabled>
+                <option default>INDIA</option>
+            </select>
             <span class="error"></span>
         </div>
-        <div class="mt-1 px-2 text-center">
-            <button type="submit" class="btn btn-primary">Register</button>
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <label>State<span class="text-danger">*</span></label>
+            <select class="form-select" id="state" name="state">
+                <option selected disabled>Choose State</option>
+            </select>
+            <span class="error"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <label>City<span class="text-danger">*</span></label>
+            <select class="form-select" id="city" name="city">
+                <option selected disabled>Choose City</option>
+            </select>
+            <span class="error"></span>
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <label>Pincode<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="pincode" placeholder="Pincode" name="pincode">
+            <span class="error"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <label>User ID<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="username" placeholder="Company Email" name="username">
+            <span class="error"></span>
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <label>Contact Number<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="contact" placeholder="XXXXXXXXX" name="contact">
+            <span class="error"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <label>Login Password<span class="text-danger">*</span></label>
+            <input type="password" class="form-control" id="password" name="password">
+            <span class="error"></span>
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <label>Confirm Password<span class="text-danger">*</span></label>
+            <input type="password" class="form-control" id="cpassword" name="cpassword">
+            <span class="error"></span>
+        </div>
+    </div>
+    <div class="row place-center">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <button class="btn btn-primary w-100">Register</button>
         </div>
     </div>
 </div>
 
 <div class="container mt-3" *ngIf="type=='consultant'">
-    <h2>Consultant Signup</h2>
-    <div class="col-md-6 col-sm-12">
-        <div class="mt-1 px-2">
-            <input type="text" class="form-control" id="firstname" placeholder="First Name" name="firstname">
+    <div class="image-background"></div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <h2>Consultant Registration </h2>
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <span class="navigation-link" routerLink="/register/company">Are you company? Register here</span><br/>
+            <span class="navigation-link" routerLink="/login">Already Registered? Login now</span>
+        </div>     
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <label>First Name<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="firstName" placeholder="First Name" name="firstName">
             <span class="error"></span>
         </div>
-        <div class="mt-1 px-2">
-            <input type="text" class="form-control" id="lastname" placeholder="Last Name" name="lastname">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <label>Last Name<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="lastName" placeholder="Last Name" name="lastName">
             <span class="error"></span>
         </div>
-        
-        <div class="mt-1 px-2">
-            <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <label>Address<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="address" placeholder="Address" name="address">
             <span class="error"></span>
         </div>
-        <div class="mt-1 px-2">
-            <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <label>Country<span class="text-danger">*</span></label>
+            <select class="form-select" id="country" name="country" disabled>
+                <option default>INDIA</option>
+            </select>
             <span class="error"></span>
         </div>
-        <div class="mt-1 px-2">
-            <input type="password" class="form-control" id="cpassword" placeholder="Confirm Password" name="cpassword">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <label>State<span class="text-danger">*</span></label>
+            <select class="form-select" id="state" name="state">
+                <option selected disabled>Choose State</option>
+            </select>
             <span class="error"></span>
         </div>
-        <div class="mt-1 px-2">
-            <input type="email" class="form-control" id="mobile" placeholder="Mobile Number" name="mobile">
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <label>City<span class="text-danger">*</span></label>
+            <select class="form-select" id="city" name="city">
+                <option selected disabled>Choose City</option>
+            </select>
             <span class="error"></span>
         </div>
-        <div class="mt-1 px-2">
-            <textarea class="form-control" placeholder="Address"></textarea>
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <label>Pincode<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="pincode" placeholder="Pincode" name="pincode">
             <span class="error"></span>
         </div>
-        <div class="mt-1 px-2 text-center">
-            <button type="submit" class="btn btn-primary">Sign up</button>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <label>User ID<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="username" placeholder="User Email ID" name="username">
+            <span class="error"></span>
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <label>Contact Number<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="contact" placeholder="XXXXXXXXX" name="contact">
+            <span class="error"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <label>Login Password<span class="text-danger">*</span></label>
+            <input type="password" class="form-control" id="password" name="password">
+            <span class="error"></span>
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <label>Confirm Password<span class="text-danger">*</span></label>
+            <input type="password" class="form-control" id="cpassword" name="cpassword">
+            <span class="error"></span>
+        </div>
+    </div>
+    <div class="row place-center">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <button class="btn btn-primary w-100">Register</button>
         </div>
     </div>
 </div>
