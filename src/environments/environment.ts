@@ -5,13 +5,12 @@
 export const environment = {
   production: false,
   firebase: {
-   apiKey: "AIzaSyAwu8fVmyT0BOnu7-sEDuI3UY7_jdIptKk",
-    authDomain: "eathealthy.firebaseapp.com",
-    databaseURL: "https://eathealthy.firebaseio.com",
-    projectId: "eathealthy",
-    storageBucket: "eathealthy.appspot.com",
-    messagingSenderId: "445163625376",
-    appId: "1:445163625376:web:6f27fcfab90c01b90ae2c5"
+    apiKey: "AIzaSyC_-QzpiYjm5nZFnekbnStXRcNfpp1C9tA",
+    authDomain: "transfer-pricing-dev.firebaseapp.com",
+    projectId: "transfer-pricing-dev",
+    storageBucket: "transfer-pricing-dev.appspot.com",
+    messagingSenderId: "620960304507",
+    appId: "1:620960304507:web:68b366b199a5a52194c1de"
   }
 };
 

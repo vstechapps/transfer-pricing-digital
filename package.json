@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --output-path docs --base-href /transfer-pricing-digital/",
+    "start": "ng serve --live-reload=false",
+    "build": "ng build --output-path docs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
