@@ -3,7 +3,7 @@ export const Validations:Validation[]=[
         "ctrl":"companyname",
         "chcks":[
             {
-                "chck":"this.companyname!=null && this.companyname!=''",
+                "chck":"this.companyname==null || this.companyname==''",
                 "msg":"Company Name is required"
             }
         ]
@@ -11,7 +11,7 @@ export const Validations:Validation[]=[
         "ctrl":"firstname",
         "chcks":[
             {
-                "chck":"this.firstname!=null && this.firstname!=''",
+                "chck":"this.firstname==null || this.firstname==''",
                 "msg":"First Name is required"
             }
         ]
@@ -19,7 +19,7 @@ export const Validations:Validation[]=[
         "ctrl":"lastname",
         "chcks":[
             {
-                "chck":"this.lastname!=null && this.lastname!=''",
+                "chck":"this.lastname==null || this.lastname==''",
                 "msg":"Last Name is required"
             }
         ]
@@ -27,7 +27,7 @@ export const Validations:Validation[]=[
         "ctrl":"industry",
         "chcks":[
             {
-                "chck":"this.industry!=null && this.industry!=''",
+                "chck":"this.industry==null || this.industry==''",
                 "msg":"Industry is required"
             }
         ]
@@ -35,7 +35,7 @@ export const Validations:Validation[]=[
         "ctrl":"address",
         "chcks":[
             {
-                "chck":"this.address!=null && this.address!=''",
+                "chck":"this.address==null || this.address==''",
                 "msg":"Address is required"
             }
         ]
@@ -43,7 +43,7 @@ export const Validations:Validation[]=[
         "ctrl":"country",
         "chcks":[
             {
-                "chck":"this.country!=null && this.country!=''",
+                "chck":"this.country==null || this.country==''",
                 "msg":"Country is required"
             }
         ]
@@ -51,7 +51,7 @@ export const Validations:Validation[]=[
         "ctrl":"state",
         "chcks":[
             {
-                "chck":"this.state!=null && this.state!=''",
+                "chck":"this.state==null || this.state==''",
                 "msg":"State is required"
             }
         ]
@@ -59,7 +59,7 @@ export const Validations:Validation[]=[
         "ctrl":"city",
         "chcks":[
             {
-                "chck":"this.city!=null && this.city!=''",
+                "chck":"this.city==null || this.city==''",
                 "msg":"City is required"
             }
         ]
@@ -67,15 +67,15 @@ export const Validations:Validation[]=[
         "ctrl":"pincode",
         "chcks":[
             {
-                "chck":"this.pincode!=null && this.pincode!=''",
-                "msg":"Company Name is required"
+                "chck":"this.pincode==null || this.pincode==''",
+                "msg":"Pincode is required"
             }
         ]
     },{
         "ctrl":"userid",
         "chcks":[
             {
-                "chck":"this.userid!=null && this.userid!=''",
+                "chck":"this.userid==null || this.userid==''",
                 "msg":"User ID is required"
             }
         ]
@@ -83,7 +83,7 @@ export const Validations:Validation[]=[
         "ctrl":"contact",
         "chcks":[
             {
-                "chck":"this.contact!=null && this.contact!=''",
+                "chck":"this.contact==null || this.contact==''",
                 "msg":"Contact Number is required"
             }
         ]
@@ -91,7 +91,7 @@ export const Validations:Validation[]=[
         "ctrl":"password",
         "chcks":[
             {
-                "chck":"this.password!=null && this.password!=''",
+                "chck":"this.password==null || this.password==''",
                 "msg":"Password is required"
             }
         ]
@@ -99,7 +99,7 @@ export const Validations:Validation[]=[
         "ctrl":"cpassword",
         "chcks":[
             {
-                "chck":"this.cpassword!=null && this.cpassword!=''",
+                "chck":"this.cpassword==null || this.cpassword==''",
                 "msg":"Confirm password is required"
             },{
                 "chck":"this.cpassword!=this.password",

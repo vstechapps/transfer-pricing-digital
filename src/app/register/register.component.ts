@@ -17,9 +17,10 @@ export class RegisterComponent implements OnInit {
   industries:string[]=[];
 
   companyname:string="";
-  firstName:string="";
-  lastName:string="";
+  firstname:string="";
+  lastname:string="";
   industry:string="";
+  address:string="";
   country:string="INDIA";
   state:string="";
   city:string="";
@@ -42,8 +43,10 @@ export class RegisterComponent implements OnInit {
     this.route.paramMap.subscribe(map=>{
       this.type=map.get("type");
       if(this.type!=null && !this.types.includes(this.type))this.router.navigate(["home"]);
+      this.loadValidation();
     });
     this.load();
+    
   }
 
   load(){
@@ -58,9 +61,12 @@ export class RegisterComponent implements OnInit {
   }
  
   loadValidation(){
+    this.validated=false;
+    this.touched=false;
+    this.errors={};
     this.validations=this.type==this.types[0]?
     Validations.filter(i=>["address","country","state","city","pincode","contact","userid","password","cpassword","companyname","industry"].includes(i.ctrl)):
-    Validations.filter(i=>["address","country","state","city","pincode","contact","userid","password","cpassword","firstName","lastName"].includes(i.ctrl));
+    Validations.filter(i=>["address","country","state","city","pincode","contact","userid","password","cpassword","firstname","lastname"].includes(i.ctrl));
   }
 
   
@@ -77,10 +83,17 @@ export class RegisterComponent implements OnInit {
           break;
         }
       }
-      this.validated=validated;
-      this.errors=errs;
     });
+    this.validated=validated;
+    this.errors=errs;
+    return validated;
+  }
 
+  register(){
+    this.touched=true;
+    if(this.validate()){
+      alert("Validation for Register user success");
+    }
   }
 
 }
