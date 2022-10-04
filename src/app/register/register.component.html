@@ -19,6 +19,7 @@
             <label>Industry<span class="text-danger">*</span></label>
             <select class="form-select" id="industry" name="industry">
                 <option selected disabled>Choose Industry</option>
+                <option *ngFor="let i of industries" [value]="i">{{i}}</option>
             </select>
             <span class="error"></span>
         </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BaseDataService } from '../services/base-data.service';
+import { Validation, Validations } from './register.validation';
 
 @Component({
   selector: 'app-register',
@@ -13,9 +14,26 @@ export class RegisterComponent implements OnInit {
   state_city_map:any;
   states:string[]=[];
   cities:string[]=[];
+  industries:string[]=[];
 
+  companyname:string="";
+  firstName:string="";
+  lastName:string="";
+  industry:string="";
+  country:string="INDIA";
   state:string="";
   city:string="";
+  pincode:string="";
+  userid:string="";
+  contact:string="";
+  password:string="";
+  cpassword:string="";
+
+
+  validations:Validation[]=[];
+  touched:boolean=false;
+  validated:boolean=false;
+  errors:any={};
 
   constructor(private route:ActivatedRoute,private router:Router, private baseData:BaseDataService) {
   }
@@ -33,6 +51,36 @@ export class RegisterComponent implements OnInit {
       this.state_city_map=res;
       this.states=Object.keys(this.state_city_map);
     });
+    this.baseData.getIndustries().then(res=>{
+      this.industries = res;
+    });
+    
+  }
+ 
+  loadValidation(){
+    this.validations=this.type==this.types[0]?
+    Validations.filter(i=>["address","country","state","city","pincode","contact","userid","password","cpassword","companyname","industry"].includes(i.ctrl)):
+    Validations.filter(i=>["address","country","state","city","pincode","contact","userid","password","cpassword","firstName","lastName"].includes(i.ctrl));
+  }
+
+  
+
+  validate(){
+    let errs:any={};
+    let validated=true;
+    if(!this.touched)return;
+    this.validations.forEach(v=>{
+      for(var c in v.chcks){
+        if(eval(v.chcks[c].chck)){
+          validated=false;
+          errs[v.ctrl]=v.chcks[c].msg;
+          break;
+        }
+      }
+      this.validated=validated;
+      this.errors=errs;
+    });
+
   }
 
 }
