@@ -86,7 +86,7 @@ export const Validations:Validation[]=[
                 "chck":"this.userid==null || this.userid==''",
                 "msg":"User ID is required"
             },{
-                "chck":"/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.userid)",
+                "chck":"!validateEmail(this.userid)",
                 "msg":"Enter valid email address"
             }
         ]
