@@ -5,6 +5,10 @@ export const Validations:Validation[]=[
             {
                 "chck":"this.companyname==null || this.companyname==''",
                 "msg":"Company Name is required"
+            },
+            {
+                "chck":"this.companyname.length<3",
+                "msg":"Company Name should have min 3 characters"
             }
         ]
     },{
@@ -13,6 +17,10 @@ export const Validations:Validation[]=[
             {
                 "chck":"this.firstname==null || this.firstname==''",
                 "msg":"First Name is required"
+            },
+            {
+                "chck":"this.firstname.length<3",
+                "msg":"First Name should have min 3 characters"
             }
         ]
     },{
@@ -77,6 +85,9 @@ export const Validations:Validation[]=[
             {
                 "chck":"this.userid==null || this.userid==''",
                 "msg":"User ID is required"
+            },{
+                "chck":"/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.userid)",
+                "msg":"Enter valid email address"
             }
         ]
     },{
@@ -85,6 +96,10 @@ export const Validations:Validation[]=[
             {
                 "chck":"this.contact==null || this.contact==''",
                 "msg":"Contact Number is required"
+            },
+            {
+                "chck":"this.contact.length<10",
+                "msg":"Enter 10 digits contact number"
             }
         ]
     },{
@@ -93,6 +108,9 @@ export const Validations:Validation[]=[
             {
                 "chck":"this.password==null || this.password==''",
                 "msg":"Password is required"
+            },{
+                "chck":"this.password.length<8",
+                "msg":"Password should be min 8 characters"
             }
         ]
     },{
