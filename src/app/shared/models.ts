@@ -1,20 +1,20 @@
 export interface User{
     id:string;
-    password:string;
+    email:string;
+    password?:string;
     role:string;
 }
 
 export interface Consultant extends User{
     firstName:string;
     lastName:string;
-    mail:string;
     contact:string;
     address:Address;
 }
 
 export interface Company extends User{
     name:string;
-    mail:string;
+    industry:string;
     contact:string;
     address:Address;
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BaseDataService } from '../services/base-data.service';
+import { FirestoreService } from '../services/firestore.service';
+import { Address, Company, Consultant, User } from '../shared/models';
 import { Validation, Validations } from './register.validation';
 
 @Component({
@@ -36,7 +38,8 @@ export class RegisterComponent implements OnInit {
   validated:boolean=false;
   errors:any={};
 
-  constructor(private route:ActivatedRoute,private router:Router, private baseData:BaseDataService) {
+  constructor(private route:ActivatedRoute,private router:Router, private baseData:BaseDataService,
+    public firestore:FirestoreService) {
   }
 
   ngOnInit(): void {
@@ -92,8 +95,51 @@ export class RegisterComponent implements OnInit {
   register(){
     this.touched=true;
     if(this.validate()){
-      alert("Validation for Register user success");
+      // Registering user to firebase authmodule using username and password
+      let user:User=this.getUser();
+      this.firestore.register(user);
     }
+  }
+
+  getUser():User{
+    return this.type==this.types[0]?this.getCompany():this.getConsultant();
+  }
+
+  getCompany():Company{
+    return{
+      id:this.userid,
+      email:this.userid,
+      role:this.types[1],
+      name:this.companyname,
+      industry:this.industry,
+      contact:this.contact,
+      address:this.getAddress(),
+      password:this.password
+    }
+  }
+
+  getConsultant():Consultant{
+    return{
+      id:this.userid,
+      email:this.userid,
+      role:this.types[1],
+      firstName:this.firstname,
+      lastName:this.lastname,
+      contact:this.contact,
+      address:this.getAddress(),
+      password:this.password
+    }
+  }
+
+  getAddress():Address{
+    return {
+      address:this.address,
+      country:this.country,
+      state:this.state,
+      city:this.city,
+      pincode:this.pincode
+    }
+      
   }
 
 }
