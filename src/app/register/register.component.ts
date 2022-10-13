@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BaseDataService } from '../services/base-data.service';
 import { FirestoreService } from '../services/firestore.service';
-import { Address, Company, Consultant, User } from '../shared/models';
-import { Validation, Validations } from './register.validation';
+import { Address, Company, Consultant, User, Validation } from '../shared/models';
+import { Validations } from '../shared/validations';
 
 @Component({
   selector: 'app-register',
@@ -94,11 +94,10 @@ export class RegisterComponent implements OnInit {
 
   register(){
     this.touched=true;
-    if(this.validate()){
-      // Registering user to firebase authmodule using username and password
-      let user:User=this.getUser();
-      this.firestore.register(user);
-    }
+    if(!this.validate())return;
+    // Registering user to firebase authmodule using username and password
+    let user:User=this.getUser();
+    this.firestore.register(user);
   }
 
   getUser():User{

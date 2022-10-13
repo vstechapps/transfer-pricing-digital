@@ -25,7 +25,7 @@ export class FirestoreService {
           this.user=user;
         },(err)=>{
           console.error("FirestoreService",err);
-          this.toast.error("Unable to register User","Error");
+          this.toast.error("Unable to register User","Registration Error");
         });
       },(reason)=>{
         console.error("FirestoreService",reason);
@@ -38,10 +38,10 @@ export class FirestoreService {
   handleRegisterError(code:string,user:User){
     switch(code){
       case "auth/email-already-in-use":
-        this.toast.error(user.id+" is already registered in our system.","Error")
+        this.toast.error(user.id+" is already registered in our system.","Registration Error")
         break;
       default:
-        this.toast.error("Unable to register "+user.id+" "+code,"Error");
+        this.toast.error("Unable to register "+user.id+" "+code,"Registration Error");
         break;
     }
 

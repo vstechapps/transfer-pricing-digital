@@ -33,3 +33,15 @@ export enum Role{
     COMPANY="COMPANY",
     CONSULTANT="CONSULTANT"
 }
+
+
+export interface Validation{
+    ctrl:string,
+    chcks:Condition[]
+}
+
+export interface Condition{
+    chck:string,
+    msg:string
+    
+}

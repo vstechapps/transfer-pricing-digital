@@ -1,3 +1,5 @@
+import { Validation } from "../shared/models";
+
 export const Validations:Validation[]=[
     {
         "ctrl":"companyname",
@@ -126,14 +128,3 @@ export const Validations:Validation[]=[
         ]
     }
 ];
-
-export interface Validation{
-    ctrl:string,
-    chcks:Condition[]
-}
-
-export interface Condition{
-    chck:string,
-    msg:string
-    
-}
