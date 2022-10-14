@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
   constructor(public auth: AngularFireAuth, public firestore: FirestoreService) { }
 
   ngOnInit(): void {
+    this.firestore.auth.signOut();
     this.loadValidation();
   }
 

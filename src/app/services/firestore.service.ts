@@ -20,6 +20,7 @@ export class FirestoreService {
 
   onAuthStateChanged(){
     this.auth.authState.subscribe((u:any)=>{
+      if(u==null)return;
       console.log("FirestoreService: Auth State Changed ",u);
       this.users?.doc(u.email).get().subscribe((a)=>{
         this.user=a.data();

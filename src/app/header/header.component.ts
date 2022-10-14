@@ -29,6 +29,21 @@ export class HeaderComponent implements OnInit {
   }
 
   loadMenu(){
+    let m:Menu[]=[];
+    if(this.user == undefined){
+      m.push({name:'Home',link:'/home',class:'active-link'});
+      m.push({name:'Our Services',link:'/our-services',class:'active-link'});
+      m.push({name:'Our Workflow',link:'/workflow',class:'active-link'});
+      m.push({name:'Contact Us',link:'/contact-us',class:'active-link',});
+      m.push({name:'FAQ',link:'/faq',class:'active-link'});
+      m.push({name:'Login',link:'/login',class:'active-link'});
+    }else{
+      m.push({name:'Dashboard',link:'/dashboard',class:'active-link'});
+      m.push({name:'My Profile',link:'/profile',class:'active-link'});
+      m.push({name:'My Orders',link:'/orders',class:'active-link'});
+      m.push({name:'Logout',link:'/login',class:'active-link'});
+    }
+    this.menu=m;
 
   }
 
@@ -38,8 +53,7 @@ export interface Menu{
   name?:string;
   icon?:string;
   link?:string;
-  active?:string;
-  label?:string;
-
+  class?:string;
+  click?:string;
 
 }

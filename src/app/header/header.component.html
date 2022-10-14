@@ -12,23 +12,16 @@
   </span>
   <span class="example-spacer"></span>
   <div class="d-none d-md-block">
-  <button mat-button routerLink="/home" routerLinkActive="active-link" aria-label="Home">Home</button>
-  <button mat-button routerLink="/our-services" routerLinkActive="active-link" aria-label="Services">Our Services</button>
-  <button mat-button routerLink="/workflow" routerLinkActive="active-link" aria-label="Workflow">Our Workflow</button>
-  <button mat-button routerLink="/contact-us" routerLinkActive="active-link" aria-label="Contact">Contact Us</button>
-  <button mat-button routerLink="/faq" routerLinkActive="active-link" aria-label="Faq">FAQ</button>
-  <button mat-button routerLink="/login" routerLinkActive="active-link" aria-label="Login">Login</button>
+  <button *ngFor="let m of menu" mat-button [routerLink]="m.link" routerLinkActive="{{m.class}}" >{{m.name}}</button>
   </div>
 </mat-toolbar>
 <mat-drawer-container class="example-container" [hasBackdrop]="true">
   <mat-drawer #drawer mode="over">
     <div style="margin-left:10px">
-    <button mat-button routerLink="/home" routerLinkActive="active-link" aria-label="Home">Home</button> <br/>
-    <button mat-button routerLink="/our-services" routerLinkActive="active-link" aria-label="Services">Our Services</button> <br/>
-    <button mat-button routerLink="/workflow" routerLinkActive="active-link" aria-label="Workflow">Our Workflow</button> <br/>
-    <button mat-button routerLink="/contact-us" routerLinkActive="active-link" aria-label="Contact">Contact Us</button> <br/>
-    <button mat-button routerLink="/faq" routerLinkActive="active-link" aria-label="Faq">FAQ</button>
-    <button mat-button routerLink="/login" routerLinkActive="active-link" aria-label="Login">Login</button>
+      <div *ngFor="let m of menu">
+        <button  mat-button [routerLink]="m.link" routerLinkActive="{{m.class}}" >{{m.name}}</button> <br/>
+      </div>
+      
     </div>
   </mat-drawer>
   <router-outlet></router-outlet>
