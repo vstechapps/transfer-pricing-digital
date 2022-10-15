@@ -15,7 +15,7 @@
   <button *ngFor="let m of menu" mat-button [routerLink]="m.link" routerLinkActive="{{m.class}}" >{{m.name}}</button>
   </div>
 </mat-toolbar>
-<mat-drawer-container class="example-container" [hasBackdrop]="true">
+<mat-drawer-container class="example-container" [hasBackdrop]="true" [style.height.px]="contentScreenHeight">
   <mat-drawer #drawer mode="over">
     <div style="margin-left:10px">
       <div *ngFor="let m of menu">
