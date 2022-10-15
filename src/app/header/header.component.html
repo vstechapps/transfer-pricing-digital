@@ -17,11 +17,10 @@
 </mat-toolbar>
 <mat-drawer-container class="example-container" [hasBackdrop]="true" [style.height.px]="contentScreenHeight">
   <mat-drawer #drawer mode="over">
-    <div style="margin-left:10px">
+    <div style="margin:0 10px">
       <div *ngFor="let m of menu">
-        <button  mat-button [routerLink]="m.link" routerLinkActive="{{m.class}}" >{{m.name}}</button> <br/>
+        <button  mat-button [routerLink]="m.link" routerLinkActive="{{m.class}}" class="menu-left">{{m.name}}</button>
       </div>
-      
     </div>
   </mat-drawer>
   <router-outlet></router-outlet>
