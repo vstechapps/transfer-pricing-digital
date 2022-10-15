@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { FirestoreService } from '../services/firestore.service';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
@@ -27,6 +27,11 @@ export class HeaderComponent implements OnInit {
       this.loadMenu();
     });
 
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event:any) {
+    this.contentScreenHeight = (window.innerHeight - 110);
   }
 
   loadMenu(){
