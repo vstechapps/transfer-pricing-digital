@@ -13,9 +13,10 @@ import { User } from '../shared/models';
 export class HeaderComponent implements OnInit {
   user?:User;
   menu:Menu[]=[];
+  contentScreenHeight=800;
   
   constructor(public firestore: FirestoreService, public router: Router) {
-
+    this.contentScreenHeight = (window.innerHeight - 110) ;
 
   }
 
