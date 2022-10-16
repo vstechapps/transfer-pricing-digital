@@ -25,7 +25,9 @@ import { FaqComponent } from './faq/faq.component';
 import { WorkflowComponent } from './workflow/workflow.component';
 import { RegisterComponent } from './register/register.component';
 import { SectionCardsComponent } from './section-cards/section-cards.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { LoaderComponent } from './loader/loader.component';
+import { LoaderInterceptor } from './loader/loader.interceptor';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import { HttpClientModule } from '@angular/common/http';
     FaqComponent,
     WorkflowComponent,
     RegisterComponent,
-    SectionCardsComponent
+    SectionCardsComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,9 @@ import { HttpClientModule } from '@angular/common/http';
     ToastrModule.forRoot(),
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
