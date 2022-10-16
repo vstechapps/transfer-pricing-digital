@@ -9,6 +9,8 @@ import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatTabsModule} from '@angular/material/tabs';
 import { MatSelectModule} from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatStepperModule } from '@angular/material/stepper';
 
 
 @NgModule({
@@ -17,7 +19,7 @@ import { MatCardModule } from '@angular/material/card';
   ],
   exports:[
     MatSidenavModule,MatIconModule,MatToolbarModule,MatTabsModule,MatButtonModule,MatExpansionModule,MatFormFieldModule,
-    MatCardModule,MatSelectModule
+    MatCardModule,MatSelectModule,MatProgressSpinnerModule,MatStepperModule
   ],
   providers: []
 })

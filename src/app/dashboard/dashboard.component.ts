@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { FirestoreService } from '../services/firestore.service';
 
 
@@ -8,9 +9,9 @@ import { FirestoreService } from '../services/firestore.service';
   styleUrls: ['./dashboard.component.less']
 })
 export class DashboardComponent implements OnInit {
-  
-  constructor(public firestore: FirestoreService) {
-  }
+  isLinear = false;
+
+  constructor() {}
 
   ngOnInit(): void {
   }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Router } from '@angular/router';
+import { LoaderService } from '../loader/loader.service';
 
 
 import { FirestoreService } from '../services/firestore.service';
@@ -21,7 +23,7 @@ export class LoginComponent implements OnInit {
   validated:boolean=false;
   errors:any={};
 
-  constructor(public auth: AngularFireAuth, public firestore: FirestoreService) { }
+  constructor(public auth: AngularFireAuth, public firestore: FirestoreService,public route:Router) { }
 
   ngOnInit(): void {
     this.firestore.auth.signOut();
@@ -37,13 +39,17 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.touched = true;
+    this.firestore.loader.show();
     if (!this.validate()) return;
     this.auth.signInWithEmailAndPassword(this.userid, this.password)
       .then((value)=>{
+        this.firestore.loader.hide();
         console.log("User Login Success ",value);
         this.firestore.toast.success(this.userid,"User Login Success");
+        this.route.navigate(['dashboard']);
       })
       .catch((err: any) => {
+        this.firestore.loader.hide();
         console.error(err);
         this.handleError(err.code);
       });

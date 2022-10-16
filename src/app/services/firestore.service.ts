@@ -2,6 +2,7 @@ import { EventEmitter, Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { ToastrService } from 'ngx-toastr';
+import { LoaderService } from '../loader/loader.service';
 import { User } from '../shared/models';
 
 @Injectable({
@@ -12,15 +13,18 @@ export class FirestoreService {
   private users?:AngularFirestoreCollection<User>;
   public UserUpdateEvent=new EventEmitter<User>();
 
-  constructor(public firestore: AngularFirestore,public auth: AngularFireAuth,public toast:ToastrService) {
+  constructor(public firestore: AngularFirestore,public auth: AngularFireAuth,public toast:ToastrService, public loader:LoaderService) {
     this.users = this.firestore.collection("users");
-    this.toast.toastrConfig.timeOut=20000;
+    this.toast.toastrConfig.timeOut=10000;
     this.onAuthStateChanged();
   }
 
   onAuthStateChanged(){
     this.auth.authState.subscribe((u:any)=>{
-      if(u==null)return;
+      if(u==null){
+        this.UserUpdateEvent.emit(undefined);
+        return;
+      }
       console.log("FirestoreService: Auth State Changed ",u);
       this.users?.doc(u.email).get().subscribe((a)=>{
         this.user=a.data();
@@ -32,17 +36,21 @@ export class FirestoreService {
 
   register(user:User){
     if(!user.password)return;
+      this.loader.show();
       this.auth.createUserWithEmailAndPassword(user.email,user.password)
       .then((value)=>{
         user.password="";
         this.firestore.collection("users").doc(user.email).set(user).then((success)=>{
+          this.loader.hide();
           this.toast.success(user.email,"User Registration Success")
           this.user=user;
         },(err)=>{
+          this.loader.hide();
           console.error("FirestoreService",err);
           this.toast.error("Unable to register User","Registration Error");
         });
       },(reason)=>{
+        this.loader.hide();
         console.error("FirestoreService",reason);
         this.handleRegisterError(reason.code,user);
       });

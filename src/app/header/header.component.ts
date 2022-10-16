@@ -40,9 +40,9 @@ export class HeaderComponent implements OnInit {
       m.push({name:'Home',link:'/home',class:'active-link'});
       m.push({name:'Our Services',link:'/our-services',class:'active-link'});
       m.push({name:'Our Workflow',link:'/workflow',class:'active-link'});
-      m.push({name:'Contact Us',link:'/contact-us',class:'active-link',});
       m.push({name:'FAQ',link:'/faq',class:'active-link'});
       m.push({name:'Login',link:'/login',class:'active-link'});
+      m.push({name:'Contact',link:'/contact-us',class:'active-link',});
     }else{
       m.push({name:'Dashboard',link:'/dashboard',class:'active-link'});
       m.push({name:'My Profile',link:'/profile',class:'active-link'});
