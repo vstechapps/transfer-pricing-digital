@@ -9,28 +9,31 @@
             <div class="formRow formRow1Col"><span class="formRowLabel">First Name</span>
                 <div class="formRowColWide">
                     <input id="contact_first_name" class="form-control input-lg" type="text" name="contact_first_name"
-                        style="width: 100%;">
+                        style="width: 100%;" [(ngModel)]="firstname">
+                    <span class="error">{{errors.firstname}}</span>
                 </div>
                 <div class="formRowPadding"></div>
             </div>
             <div class="formRow formRow1Col"><span class="formRowLabel">Last Name</span>
                 <div class="formRowColWide">
                     <input id="contact_last_name" class="form-control input-lg" type="text" name="contact_last_name"
-                        style="width: 100%;">
+                        style="width: 100%;" [(ngModel)]="lastname">
+                    <span class="error">{{errors.lastname}}</span>
                 </div>
                 <div class="formRowPadding"></div>
             </div>
             <div class="formRow formRow1Col"><span class="formRowLabel">E-mail Address</span>
                 <div class="formRowColWide">
                     <input id="contact_email" class="form-control input-lg"
-                        type="text" name="contact_email" style="width: 100%;">
+                        type="text" name="contact_email" style="width: 100%;" [(ngModel)]="email">
+                    <span class="error">{{errors.email}}</span>
                 </div>
                 <div class="formRowPadding"></div>
             </div>
             <div class="formRow formRow1Col"><span class="formRowLabel">Phone Number</span>
                 <div class="formRowColWide">
                     <input id="contact_phone" class="form-control input-lg" type="text" name="contact_phone"
-                        style="width: 100%;">
+                        style="width: 100%;" [(ngModel)]="contact">
                 </div>
                 <div class="formRowPadding"></div>
             </div>
@@ -39,7 +42,8 @@
             <div class="formRow formRow1Col"><span class="formRowLabel">Your Message</span>
                 <div class="formRowColWide">
                     <textarea id="comment" class="form-control input-lg" name="comment"
-                        style="width: 100%; height: 300px;"></textarea>
+                        style="width: 100%; height: 300px;" [(ngModel)]="comment"></textarea>
+                    <span class="error">{{errors.comment}}</span>
                 </div>
                 <div class="formRowPadding"></div>
             </div>
@@ -48,7 +52,7 @@
             <div style="text-align: center" class="formRow formRow1Col">
                 <div class="formRowColWide">
                     <button type="submit" id="s8-formssubmitbutton1" class="btn btn-primary" name="s8-formssubmitbutton1"
-                        value="1">Submit</button>
+                        value="1" (click)="submitMessage()">Submit</button>
                 </div>
                 <div class="formRowPadding"></div>
             </div>

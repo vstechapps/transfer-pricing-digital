@@ -126,5 +126,24 @@ export const Validations:Validation[]=[
                 "msg":"Confirm password does not match with password"
             }
         ]
+    },{
+        "ctrl":"comment",
+        "chcks":[
+            {
+                "chck":"this.comment==null || this.comment==''",
+                "msg":"Please enter your message in comment"
+            }
+        ]
+    },{
+        "ctrl":"email",
+        "chcks":[
+            {
+                "chck":"this.email==null || this.email==''",
+                "msg":"Please enter your Email ID"
+            },{
+                "chck":"!validateEmail(this.email)",
+                "msg":"Enter valid email address"
+            }
+        ]
     }
 ];
