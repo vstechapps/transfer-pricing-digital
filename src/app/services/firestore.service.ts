@@ -15,6 +15,8 @@ export class FirestoreService {
 
   constructor(public firestore: AngularFirestore,public auth: AngularFireAuth,public toast:ToastrService, public loader:LoaderService) {
     this.users = this.firestore.collection("users");
+    this.toast.toastrConfig.progressBar=true;
+    this.toast.toastrConfig.positionClass="toast-bottom-right";
     this.toast.toastrConfig.timeOut=10000;
     this.onAuthStateChanged();
   }
@@ -70,7 +72,6 @@ export class FirestoreService {
   }
 
   
-
 
   
 }
