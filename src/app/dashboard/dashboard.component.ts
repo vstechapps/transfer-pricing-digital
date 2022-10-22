@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
   }
 
   validate():boolean{
-    return false;
+    return true;
   }
 
   next(){

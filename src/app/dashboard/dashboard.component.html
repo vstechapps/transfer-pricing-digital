@@ -1,19 +1,20 @@
 <div class="container mt-3">
     <div class="steps-container">
-        <div class="step active" style="width: 33.3333%;">
+        <div class="step" [ngClass]="{'active':step==1}" style="width: 33.3333%;">
             <div class="step-index"><span class="step-circle">1</span></div>
             <div class="step-text"> Provide Company Information </div>
         </div>
-        <div class="step inactive" style="width: 33.3333%;">
+        <div class="step inactive" [ngClass]="{'active':step==2}" style="width: 33.3333%;">
             <div class="step-index"><span class="step-circle">2</span></div>
             <div class="step-text"> Upload Required Documents </div>
         </div>
-        <div class="step inactive" style="width: 33.3333%;">
+        <div class="step inactive" [ngClass]="{'active':step==3}" style="width: 33.3333%;">
             <div class="step-index"><span class="step-circle">3</span></div>
             <div class="step-text"> Place Order </div>
         </div>
     </div>
     <div class="step-main">
-        
+        <button class="btn btn-secondary" *ngIf="step>1" (click)="previous()">Previous</button>
+        <button class="btn btn-primary" *ngIf="step<3" (click)="next()">Next</button>
     </div>
 </div>
