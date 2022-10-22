@@ -9,11 +9,23 @@ import { FirestoreService } from '../services/firestore.service';
   styleUrls: ['./dashboard.component.less']
 })
 export class DashboardComponent implements OnInit {
-  isLinear = false;
+   step = 1;
 
   constructor() {}
 
   ngOnInit(): void {
+  }
+
+  validate():boolean{
+    return false;
+  }
+
+  next(){
+    if(this.validate())this.step++;
+  }
+
+  previous(){
+    this.step--;
   }
 
 
