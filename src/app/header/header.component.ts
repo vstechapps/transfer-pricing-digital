@@ -44,8 +44,8 @@ export class HeaderComponent implements OnInit {
       m.push({name:'About Us',link:'/about-us',class:'active-link',align:"bottom"});
       m.push({name:'Services',link:'/our-services',class:'active-link',align:"bottom"});
       m.push({name:'Workflow',link:'/workflow',class:'active-link',align:"bottom"});
-      m.push({name:'FAQ',link:'/faq',class:'active-link',align:"bottom"});
       m.push({name:'Contact',link:'/contact-us',class:'active-link',align:"bottom"});
+      m.push({name:'FAQ',link:'/faq',class:'active-link',align:"bottom"});
     }else{
       m.push({name:this.user.email,link:'/dashboard',class:'active',align:"top"});
       m.push({name:'Dashboard',link:'/dashboard',class:'active-link',align:"bottom"});

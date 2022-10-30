@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatAccordion } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-faq',
@@ -7,11 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FaqComponent implements OnInit {
 
-  questions=questions;
+  
+  @ViewChild(MatAccordion) accordion!: MatAccordion;
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit(): void {
+    console.log("Hello klkkl");
+    console.log(this.accordion);
+    this.accordion?.openAll();
   }
 
 }
