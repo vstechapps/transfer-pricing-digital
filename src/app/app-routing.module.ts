@@ -9,10 +9,12 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FaqComponent } from './faq/faq.component';
 import { WorkflowComponent } from './workflow/workflow.component';
 import { RegisterComponent } from './register/register.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 const routes: Routes = [
   { path:'', pathMatch:"full", redirectTo: "home"},
   { path: 'home', component: HomeComponent },
+  { path: 'about-us', component: AboutUsComponent},
   { path: 'our-services', component: OurServicesComponent},
   { path: 'contact-us', component: ContactUsComponent},
   { path: 'faq', component:FaqComponent},

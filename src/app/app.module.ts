@@ -28,6 +28,7 @@ import { SectionCardsComponent } from './section-cards/section-cards.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoaderComponent } from './loader/loader.component';
 import { LoaderInterceptor } from './loader/loader.interceptor';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { LoaderInterceptor } from './loader/loader.interceptor';
     WorkflowComponent,
     RegisterComponent,
     SectionCardsComponent,
-    LoaderComponent
+    LoaderComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

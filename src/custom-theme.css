@@ -1712,7 +1712,7 @@ td.mat-footer-cell {
   border-right-color: rgba(255, 255, 255, 0.12);
 }
 .mat-expansion-panel {
-  background: chocolate;
+  background: cadetblue;
   color: #fff;
 }
 .mat-expansion-panel:not([class*="mat-elevation-z"]) {
@@ -1733,7 +1733,7 @@ td.mat-footer-cell {
 @media (hover: none) {
   .mat-expansion-panel:not(.mat-expanded):not([aria-disabled="true"])
     .mat-expansion-panel-header:hover {
-    background: chocolate;
+    background: cadetblue;
   }
 }
 .mat-expansion-panel-header-title {
@@ -1756,7 +1756,12 @@ td.mat-footer-cell {
   height: 48px;
 }
 .mat-expansion-panel-header.mat-expanded {
-  height: 64px;
+  min-height: 64px;
+  height: fit-content;
+}
+.mat-expansion-panel:not(.mat-expanded){
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .mat-form-field-label {
   color: rgba(255, 255, 255, 0.7);
