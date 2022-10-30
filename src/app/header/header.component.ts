@@ -38,8 +38,9 @@ export class HeaderComponent implements OnInit {
     let m:Menu[]=[];
     if(this.user == undefined){
       m.push({name:'Home',link:'/home',class:'active-link'});
-      m.push({name:'Our Services',link:'/our-services',class:'active-link'});
-      m.push({name:'Our Workflow',link:'/workflow',class:'active-link'});
+      m.push({name:'About Us',link:'/about-us',class:'active-link'});
+      m.push({name:'Services',link:'/our-services',class:'active-link'});
+      m.push({name:'Workflow',link:'/workflow',class:'active-link'});
       m.push({name:'FAQ',link:'/faq',class:'active-link'});
       m.push({name:'Login',link:'/login',class:'active-link'});
       m.push({name:'Contact',link:'/contact-us',class:'active-link',});
