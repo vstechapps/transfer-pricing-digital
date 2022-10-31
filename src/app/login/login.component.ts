@@ -39,8 +39,8 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.touched = true;
-    this.firestore.loader.show();
     if (!this.validate()) return;
+    this.firestore.loader.show();
     this.auth.signInWithEmailAndPassword(this.userid, this.password)
       .then((value)=>{
         this.firestore.loader.hide();

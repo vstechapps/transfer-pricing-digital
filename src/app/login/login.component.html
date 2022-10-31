@@ -8,14 +8,14 @@
                     <h1 class="fs-4 card-title fw-bold mb-4">Login</h1>
                     <form method="POST" class="needs-validation" novalidate="" autocomplete="off">
                         <div class="mb-1">
-                            <label class="text-muted">User ID<span class="text-danger">*</span></label>
+                            <label>User ID<span class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="username" placeholder="Email ID" name="username"
                                 [(ngModel)]="userid">
                             <span class="error">{{errors.userid}}</span>
                         </div>
 
                         <div class="mb-1">
-                            <label class="text-muted">Password<span class="text-danger">*</span></label>
+                            <label>Password<span class="text-danger">*</span></label>
                             <input type="password" class="form-control" id="password" name="password" placeholder="Password" [(ngModel)]="password">
                             <span class="error">{{errors.password}}</span>
                         </div>
