@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { BaseDataService } from '../services/base-data.service';
-import { FirestoreService } from '../services/firestore.service';
-import { Address, Company, Consultant, User, Validation } from '../shared/models';
-import { Validations } from '../shared/validations';
+import { BaseDataService } from '../../services/base-data.service';
+import { FirestoreService } from '../../services/firestore.service';
+import { Address, Company, Consultant, User, Validation } from '../../shared/models';
+import { Validations } from '../../shared/validations';
 
 @Component({
   selector: 'app-register',

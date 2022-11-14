@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
-import { LoaderService } from '../loader/loader.service';
+import { LoaderService } from '../../basic/loader/loader.service';
 
 
-import { FirestoreService } from '../services/firestore.service';
-import { Validation } from '../shared/models';
-import { Validations } from '../shared/validations';
+import { FirestoreService } from '../../services/firestore.service';
+import { Validation } from '../../shared/models';
+import { Validations } from '../../shared/validations';
 
 @Component({
   selector: 'app-login',

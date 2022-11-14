@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ICON_REGISTRY_PROVIDER_FACTORY } from '@angular/material/icon';
-import { FirestoreService } from '../services/firestore.service';
-import { Validation } from '../shared/models';
-import { Validations } from '../shared/validations';
+import { FirestoreService } from '../../services/firestore.service';
+import { Validation } from '../../shared/models';
+import { Validations } from '../../shared/validations';
 
 @Component({
   selector: 'app-contact-us',

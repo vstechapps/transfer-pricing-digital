@@ -12,23 +12,28 @@ import { FooterComponent } from './footer/footer.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { ProfileComponent } from './profile/profile.component';
-import { InputComponent } from './input/input.component';
-import { CardComponent } from './card/card.component';
+import { ProfileComponent } from './user/profile/profile.component';
+import { InputComponent } from './basic/input/input.component';
+import { CardComponent } from './basic/card/card.component';
 import { ToastrModule } from 'ngx-toastr';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './user/login/login.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { MaterialModule } from './shared/material.module';
-import { OurServicesComponent } from './our-services/our-services.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
-import { FaqComponent } from './faq/faq.component';
-import { WorkflowComponent } from './workflow/workflow.component';
-import { RegisterComponent } from './register/register.component';
-import { SectionCardsComponent } from './section-cards/section-cards.component';
+import { OurServicesComponent } from './home/our-services/our-services.component';
+import { ContactUsComponent } from './home/contact-us/contact-us.component';
+import { FaqComponent } from './home/faq/faq.component';
+import { WorkflowComponent } from './home/workflow/workflow.component';
+import { RegisterComponent } from './user/register/register.component';
+import { SectionCardsComponent } from './home/section-cards/section-cards.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { LoaderComponent } from './loader/loader.component';
-import { LoaderInterceptor } from './loader/loader.interceptor';
-import { AboutUsComponent } from './about-us/about-us.component';
+import { LoaderComponent } from './basic/loader/loader.component';
+import { LoaderInterceptor } from './basic/loader/loader.interceptor';
+import { AboutUsComponent } from './home/about-us/about-us.component';
+import { QuickStartComponent } from './dashboard/quick-start/quick-start.component';
+import { ActiveWorkComponent } from './dashboard/active-work/active-work.component';
+import { RequestComponent } from './work/request/request.component';
+import { WorkModule } from './work/work.module';
+import { PaymentComponent } from './work/payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +53,11 @@ import { AboutUsComponent } from './about-us/about-us.component';
     RegisterComponent,
     SectionCardsComponent,
     LoaderComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    QuickStartComponent,
+    ActiveWorkComponent,
+    RequestComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
