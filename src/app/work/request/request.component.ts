@@ -13,6 +13,9 @@ export class RequestComponent implements OnInit {
   company = "";
   step = 1;
 
+  errors:any={};
+  companyname:string="";
+
   constructor(private route:ActivatedRoute) { }
 
   ngOnInit(): void {
