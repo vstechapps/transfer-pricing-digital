@@ -29,8 +29,10 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoaderComponent } from './basic/loader/loader.component';
 import { LoaderInterceptor } from './basic/loader/loader.interceptor';
 import { AboutUsComponent } from './home/about-us/about-us.component';
-import { QuickStartComponent } from './quick-start/quick-start.component';
-import { ActiveWorkComponent } from './active-work/active-work.component';
+import { QuickStartComponent } from './dashboard/quick-start/quick-start.component';
+import { ActiveWorkComponent } from './dashboard/active-work/active-work.component';
+import { RequestComponent } from './work/request/request.component';
+import { WorkModule } from './work/work.module';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,8 @@ import { ActiveWorkComponent } from './active-work/active-work.component';
     LoaderComponent,
     AboutUsComponent,
     QuickStartComponent,
-    ActiveWorkComponent
+    ActiveWorkComponent,
+    RequestComponent
   ],
   imports: [
     BrowserModule,

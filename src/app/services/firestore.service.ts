@@ -23,7 +23,9 @@ export class FirestoreService {
 
   onAuthStateChanged(){
     this.auth.authState.subscribe((u:any)=>{
+      this.loader.show();
       if(u==null){
+        this.loader.hide();
         this.UserUpdateEvent.emit(undefined);
         return;
       }
@@ -31,6 +33,7 @@ export class FirestoreService {
       this.users?.doc(u.email).get().subscribe((a)=>{
         this.user=a.data();
         console.log("FirestoreService: User Updated ",this.user);
+        this.loader.hide();
         this.UserUpdateEvent.emit(this.user);
       });
     });

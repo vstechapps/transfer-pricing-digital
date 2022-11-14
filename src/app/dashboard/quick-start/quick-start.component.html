@@ -3,23 +3,19 @@
     <div class="card-body">
         <div class="create-form">
             <div class="form-floating mt-2">
-                <select class="form-select" id="workorder" name="workorder">
-                    <option>Transfer Pricing</option>
-                    <option>International Taxation</option>
+                <select class="form-select" id="workorder" name="workorder" [(ngModel)]="type">
+                    <option *ngFor="let t of types" [value]="t.code">{{t.name}}</option>
                 </select>
                 <label for="workorder" class="form-label">Documentation:</label>
             </div>
             <div class="form-floating mt-2">
-                <select class="form-select" id="fy" name="fy">
-                    <option>2019-20</option>
-                    <option>2020-21</option>
-                    <option>2021-22</option>
-                    <option>2022-23</option>
+                <select class="form-select" id="fy" name="fy" [(ngModel)]="year">
+                    <option *ngFor="let y of years" [value]="y">{{y}}</option>
                 </select>
                 <label for="fy" class="form-label">Financial Year:</label>
             </div>
             <div class="text-end mt-3">
-                <button mat-button class="primary">Create</button>
+                <button mat-button class="primary" (click)="createRequest()">Create</button>
             </div>
         </div>
     </div>

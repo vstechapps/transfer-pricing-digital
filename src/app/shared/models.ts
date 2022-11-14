@@ -45,3 +45,13 @@ export interface Condition{
     msg:string
     
 }
+
+export interface DocumentType{
+    code:string;
+    name:string
+}
+
+export const DocumentTypes:DocumentType[] = [
+    {name: "Transfer Princing", code:"TP"},
+    {name: "International Taxation", code:"IT"}
+  ]

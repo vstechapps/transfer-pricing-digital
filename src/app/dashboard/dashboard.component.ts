@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
-import { FirestoreService } from '../services/firestore.service';
 
 
 @Component({
@@ -9,23 +7,11 @@ import { FirestoreService } from '../services/firestore.service';
   styleUrls: ['./dashboard.component.less']
 })
 export class DashboardComponent implements OnInit {
-   step = 1;
+   
 
   constructor() {}
 
   ngOnInit(): void {
-  }
-
-  validate():boolean{
-    return true;
-  }
-
-  next(){
-    if(this.validate())this.step++;
-  }
-
-  previous(){
-    this.step--;
   }
 
 
