@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FirestoreService } from '../services/firestore.service';
+import { FirestoreService } from '../../services/firestore.service';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({

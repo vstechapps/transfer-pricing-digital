@@ -2,7 +2,7 @@ import { EventEmitter, Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { ToastrService } from 'ngx-toastr';
-import { LoaderService } from '../loader/loader.service';
+import { LoaderService } from '../basic/loader/loader.service';
 import { User } from '../shared/models';
 
 @Injectable({
