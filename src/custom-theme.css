@@ -1296,8 +1296,8 @@ textarea.cdk-textarea-autosize-measuring-firefox {
   line-height: 48px;
 }
 .mat-card {
-  background: chocolate;
-  color: #fff;
+  background: white;
+  color: #000;
 }
 .mat-card:not([class*="mat-elevation-z"]) {
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),

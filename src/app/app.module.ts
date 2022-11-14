@@ -29,6 +29,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoaderComponent } from './loader/loader.component';
 import { LoaderInterceptor } from './loader/loader.interceptor';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { QuickStartComponent } from './quick-start/quick-start.component';
+import { ActiveWorkComponent } from './active-work/active-work.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { AboutUsComponent } from './about-us/about-us.component';
     RegisterComponent,
     SectionCardsComponent,
     LoaderComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    QuickStartComponent,
+    ActiveWorkComponent
   ],
   imports: [
     BrowserModule,
