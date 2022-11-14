@@ -33,6 +33,7 @@ import { QuickStartComponent } from './dashboard/quick-start/quick-start.compone
 import { ActiveWorkComponent } from './dashboard/active-work/active-work.component';
 import { RequestComponent } from './work/request/request.component';
 import { WorkModule } from './work/work.module';
+import { PaymentComponent } from './work/payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { WorkModule } from './work/work.module';
     AboutUsComponent,
     QuickStartComponent,
     ActiveWorkComponent,
-    RequestComponent
+    RequestComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
