@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaymentComponent implements OnInit {
 
+  payment:string="now";
+
   constructor() { }
 
   ngOnInit(): void {

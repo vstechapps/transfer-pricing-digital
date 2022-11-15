@@ -1712,7 +1712,7 @@ td.mat-footer-cell {
   border-right-color: rgba(255, 255, 255, 0.12);
 }
 .mat-expansion-panel {
-  background: cadetblue;
+  background: teal;
   color: #fff;
 }
 .mat-expansion-panel:not([class*="mat-elevation-z"]) {
@@ -2065,10 +2065,10 @@ td.mat-footer-cell {
   stroke: #f44336;
 }
 .mat-radio-outer-circle {
-  border-color: rgba(255, 255, 255, 0.7);
+  border-color: teal;
 }
 .mat-radio-button.mat-primary.mat-radio-checked .mat-radio-outer-circle {
-  border-color: goldenrod;
+  border-color: teal;
 }
 .mat-radio-button.mat-primary .mat-radio-inner-circle,
 .mat-radio-button.mat-primary
@@ -2076,7 +2076,7 @@ td.mat-footer-cell {
   .mat-ripple-element:not(.mat-radio-persistent-ripple),
 .mat-radio-button.mat-primary.mat-radio-checked .mat-radio-persistent-ripple,
 .mat-radio-button.mat-primary:active .mat-radio-persistent-ripple {
-  background-color: goldenrod;
+  background-color: teal;
 }
 .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
   border-color: #69f0ae;

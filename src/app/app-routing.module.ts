@@ -11,6 +11,7 @@ import { WorkflowComponent } from './home/workflow/workflow.component';
 import { RegisterComponent } from './user/register/register.component';
 import { AboutUsComponent } from './home/about-us/about-us.component';
 import { RequestComponent } from './work/request/request.component';
+import { PaymentComponent } from './work/payment/payment.component';
 
 const routes: Routes = [
   { path:'', pathMatch:"full", redirectTo: "home"},
@@ -25,7 +26,8 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'work/request', component: RequestComponent}
+  { path: 'work/request', component: RequestComponent},
+  { path: 'payment', component: PaymentComponent}
 ];
 
 @NgModule({

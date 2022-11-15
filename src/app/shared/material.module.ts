@@ -11,7 +11,7 @@ import { MatSelectModule} from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatStepperModule } from '@angular/material/stepper';
-import { MatTableModule } from '@angular/material/table';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 @NgModule({
@@ -20,7 +20,7 @@ import { MatTableModule } from '@angular/material/table';
   ],
   exports:[
     MatSidenavModule,MatIconModule,MatToolbarModule,MatTabsModule,MatButtonModule,MatExpansionModule,MatFormFieldModule,
-    MatCardModule,MatSelectModule,MatProgressSpinnerModule,MatStepperModule
+    MatCardModule,MatSelectModule,MatProgressSpinnerModule,MatStepperModule,MatRadioModule
   ],
   providers: []
 })
