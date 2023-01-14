@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { RequestInfo } from 'src/app/shared/models';
 import { BaseDataService } from '../../services/base-data.service';
 
 @Component({
@@ -12,9 +13,9 @@ export class RequestComponent implements OnInit {
   year = "";
   company = "";
   step = 1;
-
+  request: RequestInfo = new RequestInfo();
   errors:any={};
-  companyname:string="";
+  
 
   constructor(private route:ActivatedRoute) { }
 

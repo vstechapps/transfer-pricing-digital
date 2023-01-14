@@ -54,4 +54,23 @@ export interface DocumentType{
 export const DocumentTypes:DocumentType[] = [
     {name: "Transfer Princing", code:"TP"},
     {name: "International Taxation", code:"IT"}
-  ]
+]
+
+
+export class RequestInfo{
+    parentEntityName:string="";
+    parentEntityCountry:string="";
+    childEntityName:string="";
+    employeeCount:number=0;
+    totalRevenue:number=0;
+    earningsBeforeIncomeTax:number=0;
+    incomeTaxPaid:number=0;
+    totalEmployeeExpense:number=0;
+    tangibleAssetValue:number=0;
+    interCompanyPayments:number=0;
+}
+
+export interface Entity{
+    name:string;
+    country:string;
+}
