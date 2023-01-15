@@ -5,11 +5,11 @@ export const RequestValidations:Validation[]=[
         "ctrl":"parentEntityName",
         "chcks":[
             {
-                "chck":"this.parentEntityName==null || this.parentEntityName==''",
+                "chck":"this.request.parentEntityName==null || this.request.parentEntityName==''",
                 "msg":"Parent Entity Name is required"
             },
             {
-                "chck":"this.parentEntityName.length<3",
+                "chck":"this.request.parentEntityName.length<3",
                 "msg":"Parent Entity Name should have min 3 characters"
             }
         ]
@@ -17,7 +17,7 @@ export const RequestValidations:Validation[]=[
         "ctrl":"parentEntityCountry",
         "chcks":[
             {
-                "chck":"this.parentEntityCountry==null || this.parentEntityCountry==''",
+                "chck":"this.request.parentEntityCountry==null || this.request.parentEntityCountry==''",
                 "msg":"Parent Entity Country is required"
             }
         ]
@@ -25,7 +25,7 @@ export const RequestValidations:Validation[]=[
         "ctrl":"childEntityName",
         "chcks":[
             {
-                "chck":"this.childEntityName==null || this.childEntityName==''",
+                "chck":"this.request.childEntityName==null || this.request.childEntityName==''",
                 "msg":"Local Entity Name is required"
             }
         ]
@@ -33,7 +33,7 @@ export const RequestValidations:Validation[]=[
         "ctrl":"employeeCount",
         "chcks":[
             {
-                "chck":"this.employeeCount==0",
+                "chck":"this.request.employeeCount==0",
                 "msg":"Employee Count is required"
             }
         ]
@@ -41,7 +41,7 @@ export const RequestValidations:Validation[]=[
         "ctrl":"totalRevenue",
         "chcks":[
             {
-                "chck":"this.totalRevenue==0",
+                "chck":"this.request.totalRevenue==0",
                 "msg":"Enter the total revenue of the company"
             }
         ]
@@ -49,7 +49,7 @@ export const RequestValidations:Validation[]=[
         "ctrl":"earningsBeforeIncomeTax",
         "chcks":[
             {
-                "chck":"this.earningsBeforeIncomeTax==0",
+                "chck":"this.request.earningsBeforeIncomeTax==0",
                 "msg":"Enter earnings before income tax"
             }
         ]
@@ -57,7 +57,7 @@ export const RequestValidations:Validation[]=[
         "ctrl":"incomeTaxPaid",
         "chcks":[
             {
-                "chck":"this.incomeTaxPaid==0",
+                "chck":"this.request.incomeTaxPaid==0",
                 "msg":"Enter income tax paid"
             }
         ]
@@ -65,7 +65,7 @@ export const RequestValidations:Validation[]=[
         "ctrl":"totalEmployeeExpense",
         "chcks":[
             {
-                "chck":"this.totalEmployeeExpense==0",
+                "chck":"this.request.totalEmployeeExpense==0",
                 "msg":"Enter total employee expense"
             }
         ]
@@ -73,7 +73,7 @@ export const RequestValidations:Validation[]=[
         "ctrl":"tangibleAssetValue",
         "chcks":[
             {
-                "chck":"this.tangibleAssetValue==0",
+                "chck":"this.request.tangibleAssetValue==0",
                 "msg":"Enter Tangible Asset Value"
             }
         ]
@@ -81,7 +81,7 @@ export const RequestValidations:Validation[]=[
         "ctrl":"interCompanyPayments",
         "chcks":[
             {
-                "chck":"this.interCompanyPayments==0",
+                "chck":"this.request.interCompanyPayments==0",
                 "msg":"Enter value of InterCompanyPayments"
             }
         ]

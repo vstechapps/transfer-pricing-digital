@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { RequestInfo, Validation } from 'src/app/shared/models';
 import { RequestValidations } from '../request/request.validations';
 
@@ -7,21 +7,27 @@ import { RequestValidations } from '../request/request.validations';
   templateUrl: './request-info.component.html',
   styleUrls: ['./request-info.component.less']
 })
-export class RequestInfoComponent implements OnInit {
+export class RequestInfoComponent implements OnInit, OnChanges {
 
   validations:Validation[]=[];
   touched:boolean=false;
-  @Input()
-  validated:boolean=false;
+
   errors:any={};
 
+  @Input()
+  validated:boolean=false;
+  
   @Input()
   request:any;
 
   constructor() {
    }
+  ngOnChanges(): void {
+    this.validate();
+  }
 
   ngOnInit(): void {
+    this.loadValidation();
   }
 
   
@@ -32,6 +38,7 @@ export class RequestInfoComponent implements OnInit {
     this.validations=
     RequestValidations.filter(i=>["parentEntityName","parentEntityCountry","childEntityName","employeeCount","totalRevenue",
     "earningsBeforeIncomeTax","incomeTaxPaid","totalEmployeeExpense","tangibleAssetValue","interCompanyPayments"].includes(i.ctrl));
+    
   }
 
   

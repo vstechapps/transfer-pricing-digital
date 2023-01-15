@@ -21,10 +21,10 @@
         </div>
         <div class="step-main">
             <div *ngIf="step==1">
-                <app-request-info [request]="request"></app-request-info>
+                <app-request-info [request]="request" [validated]="validated[0]"></app-request-info>
             </div>
             <div *ngIf="step==2">
-                <app-request-files></app-request-files>
+                <app-request-files [request]="request"></app-request-files>
             </div>
             <div *ngIf="step==3">
                 <app-payment></app-payment>
