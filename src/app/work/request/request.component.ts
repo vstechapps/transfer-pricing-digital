@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { RequestInfo } from 'src/app/shared/models';
 import { BaseDataService } from '../../services/base-data.service';
+import { RequestInfoComponent } from '../request-info/request-info.component';
 
 @Component({
   selector: 'app-request',
@@ -12,9 +14,10 @@ export class RequestComponent implements OnInit {
   year = "";
   company = "";
   step = 1;
-
+  request: RequestInfo = new RequestInfo();
   errors:any={};
-  companyname:string="";
+  validated = [false,false,false];
+  
 
   constructor(private route:ActivatedRoute) { }
 
@@ -26,7 +29,7 @@ export class RequestComponent implements OnInit {
   }
 
   validate():boolean{
-    return true;
+    return this.validated[this.step-1];
   }
 
   next(){

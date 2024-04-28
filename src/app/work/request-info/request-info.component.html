@@ -1,0 +1,52 @@
+<div class="row mt-3 p-3" >
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <label>Name of Multi National Enterprise (Parent / Reporting Entity)<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="parentEntityName" name="parentEntityName" [(ngModel)]="request.parentEntityName" autocomplete="off">
+        <span class="error">{{errors.parentEntityName}}</span>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <label>Reporting MNE Country<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="parentEntityCountry" name="parentEntityCountry" [(ngModel)]="request.parentEntityCountry" autocomplete="off">
+        <span class="error">{{errors.parentEntityCountry}}</span>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <label>Name of Constituent Entity (Child / Local Entity)<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="childEntityName" name="childEntityName" [(ngModel)]="request.childEntityName" autocomplete="off">
+        <span class="error">{{errors.childEntityName}}</span>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <label>Number of Employees<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="employeeCount" name="employeeCount" [(ngModel)]="request.employeeCount" autocomplete="off">
+        <span class="error">{{errors.employeeCount}}</span>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <label>Total Revenue<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="totalRevenue" name="totalRevenue" [(ngModel)]="request.totalRevenue" autocomplete="off">
+        <span class="error">{{errors.totalRevenue}}</span>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <label>Earnings Before Income Tax<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="earningsBeforeIncomeTax" name="earningsBeforeIncomeTax" [(ngModel)]="request.earningsBeforeIncomeTax" autocomplete="off">
+        <span class="error">{{errors.earningsBeforeIncomeTax}}</span>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <label>Income Tax Paid (on Cash Basis)<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="incomeTaxPaid" name="incomeTaxPaid" [(ngModel)]="request.incomeTaxPaid" autocomplete="off">
+        <span class="error">{{errors.incomeTaxPaid}}</span>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <label>Total Employee Expense<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="totalEmployeeExpense" name="totalEmployeeExpense" [(ngModel)]="request.totalEmployeeExpense" autocomplete="off">
+        <span class="error">{{errors.totalEmployeeExpense}}</span>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <label>Tangible Assets other than Cash and Cash Equivalents<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="tangibleAssetValue" name="tangibleAssetValue" [(ngModel)]="request.tangibleAssetValue" autocomplete="off">
+        <span class="error">{{errors.tangibleAssetValue}}</span>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <label>Intercompany Payments<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="interCompanyPayments" name="interCompanyPayments" [(ngModel)]="request.interCompanyPayments" autocomplete="off">
+        <span class="error">{{errors.interCompanyPayments}}</span>
+    </div>
+</div>
